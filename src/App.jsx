@@ -39,7 +39,7 @@ function PixelBg() {
   const ref = useRef();
   useEffect(() => {
     const c = ref.current, ctx = c.getContext("2d");
-    c.width = window.innerWidth; c.height = window.innerHeight;
+    c.width = window.innerWidth; c.height = document.documentElement.scrollHeight;
     const sz = 8;
     for (let y = 0; y < c.height; y += sz)
       for (let x = 0; x < c.width; x += sz) {
